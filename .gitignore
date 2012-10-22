@@ -1,0 +1,11 @@
+au_abstract.txt
+todo.txt
+
+.*py[oc]
+.*.sw[nop]
+.sw[nop]
+*.tmp
+*.tgz
+*.diff
+*.tar.gz
+*.zip
