@@ -1,0 +1,191 @@
+(dp0
+S'Pub. Opin. Strat.'
+p1
+S'Public Opinion Strategies'
+p2
+sS'Bloomberg News'
+p3
+S'LA Times / Bloomberg'
+p4
+sS'LA Times'
+p5
+g4
+sS'Columbus Dispatch*'
+p6
+S'Columbus Dispatch (OH)'
+p7
+sS'Selzer & Co.'
+p8
+S'Selzer'
+p9
+sS'Fox/Opinion Dyn.'
+p10
+S'Fox / Opinion Dynamics'
+p11
+sS'Marist Coll.'
+p12
+S'Marist (NY)'
+p13
+sS'EPIC/MRA'
+p14
+S'EPIC-MRA'
+p15
+sS'Opinion Res.'
+p16
+S'CNN / Opinion Research'
+p17
+sS'Quinnipiac U.'
+p18
+S'Quinnipiac'
+p19
+sS'Field Poll'
+p20
+S'Field Poll (CA)'
+p21
+sS'Fairleigh-Dickinson Univ.'
+p22
+S'Fairleigh-Dickinson (NJ)'
+p23
+sS'Fairleigh Dickinson'
+p24
+g23
+sS'Pub. Opinion Strat.'
+p25
+g2
+sS'Suffolk U.'
+p26
+S'Suffolk (NH/MA)'
+p27
+sS'Star-Tribune'
+p28
+S'Star Tribune (MN)'
+p29
+sS'Zogby'
+p30
+g30
+sS'Survey USA'
+p31
+S'SurveyUSA'
+p32
+sS'Star Tribune'
+p33
+g29
+sS'Inside Advantage'
+p34
+S'Insider Advantage'
+p35
+sS'American Research'
+p36
+S'American Research Group'
+p37
+sS'Chicago Tribune'
+p38
+S'Chicago Trib. / MarketShares'
+p39
+sS'InsiderAdvantage'
+p40
+g35
+sS'Quinnipiac Univ.'
+p41
+g19
+sS'Opinion Dynamics'
+p42
+g11
+sS'PPP (D)'
+p43
+S'Public Policy Polling (PPP)'
+p44
+sS'Marist College'
+p45
+g13
+sS'Ohio Poll/Univ of Cin.'
+p46
+S'Ohio Poll'
+p47
+sS'Los Angeles Times'
+p48
+g4
+sS'Ohio Univ.'
+p49
+g47
+sS'Marist'
+p50
+g13
+sS'Field'
+p51
+g21
+sS'Fairleigh Dickinson U.'
+p52
+g23
+sS'Suffolk University'
+p53
+g27
+sS'Columbus Dispatch'
+p54
+g7
+sS'Gallup'
+p55
+S'USA Today / Gallup'
+p56
+sS'NY Times'
+p57
+S'CBS / New York Times'
+p58
+sS'Suffolk Univ.'
+p59
+g27
+sS'Rasmussen Reports'
+p60
+S'Rasmussen'
+p61
+sS'Keystone Poll'
+p62
+S'Keystone (PA)'
+p63
+sS'Quinnipiac Univ'
+p64
+g19
+sS'Opinion Research'
+p65
+g17
+sS'Mason-Dixon*'
+p66
+S'Mason-Dixon'
+p67
+sS'CNN/Opinion Research'
+p68
+g17
+sS'Mitchell Research'
+p69
+S'Mitchell'
+p70
+sS'Univ. of New Hampsh.'
+p71
+S'Univ. New Hampshire'
+p72
+sS'U. of New Hampshire'
+p73
+g72
+sS'Franklin Pierce Coll.'
+p74
+S'Franklin Pierce (NH)'
+p75
+sS'Market Shares'
+p76
+g39
+sS'American Res.Group'
+p77
+g37
+sS'Univ. of New Hampshire'
+p78
+g72
+sS'ARG'
+p79
+g37
+sS'Ohio U.'
+p80
+g47
+sS'Fairleigh Dickinson Univ.'
+p81
+g23
+s.
