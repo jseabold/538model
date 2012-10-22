@@ -1390,5 +1390,9 @@ results["Votes"].mul(results["romney"]).sum()
 
 # <markdowncell>
 
+# Do historical adjustments based on how polls changed in the past conditional on "election environment"
+
+# <markdowncell>
+
 # "Error analysis"
 
