@@ -9,6 +9,8 @@ Usage:
 Data will probably need some ex-post cleaning to be useful.
 """
 
+raise Exception("This script no longer works as RCP blocks directory access to their servers for some reason. Needs to be updated.")
+
 import urllib2
 import re
 from urllib import urlencode
