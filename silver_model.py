@@ -1380,30 +1380,9 @@ results["Votes"].mul(results["obama"]).sum()
 
 results["Votes"].mul(results["romney"]).sum()
 
-# <codecell>
-
-results[["Votes"]] * results[["obama", "romney"]]
-
 # <markdowncell>
 
-# Cluster the states based on demographics - think about importance of features
-# Fit a regression of actual 
-
-# <markdowncell>
-
-# Earliest version: group based on week (7-days before current date and roll back), pollster, 
-# 
-#     - include national polls, but don't include them in averages - used as trend for regressing
-# 
-#     - Run regression with dummy for everay week, 1 for state-pollster
-# 
-# Time effects give a sense of time trend
-# 
-# When you do the timeline adjustment for the loess adjust based on loess from all similar states and use most recent number
-
-# <markdowncell>
-
-# Combine with the weighting, do the trendline adjusment, etc. then regress against economic data (state by state?), then get fitted values and treat them like another state poll with an "average rating, usually a weight around .6"
+# TODO:
 
 # <markdowncell>
 
