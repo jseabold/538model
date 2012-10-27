@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <markdowncell>
+
+# GitHub link for the talk. You can clone the data and play with it yourself. Please submit any improvements as pull requests
+# 
+# [https://github.com/jseabold/538model](https://github.com/jseabold/538model)
+
 # <codecell>
 
 import datetime
@@ -13,7 +19,8 @@ from scipy import stats
 np.set_printoptions(precision=4, suppress=True)
 pandas.set_printoptions(notebook_repr_html=False,
                         precision=4,
-                        max_columns=12)
+                        max_columns=12, column_space=10,
+                        max_colwidth=25)
 
 # <codecell>
 
@@ -59,7 +66,8 @@ today = datetime.datetime(2012, 10, 2)
 
 # <codecell>
 
-forecasts = pandas.read_table('/home/skipper/school/seaboldgit/talks/pydata/data/wsj_forecast.csv', skiprows=2)
+forecasts = pandas.read_table("/home/skipper/school/seaboldgit/"
+                              "talks/pydata/data/wsj_forecast.csv", skiprows=2)
 
 # <codecell>
 
@@ -67,7 +75,8 @@ forecasts
 
 # <codecell>
 
-forecasts = forecasts.rename(columns={"Q3 2012" : "gdp_q3_2012", "Q4 2012" : "gdp_q4_2012"}, inplace=True)
+forecasts.rename(columns={"Q3 2012" : "gdp_q3_2012", 
+                          "Q4 2012" : "gdp_q4_2012"}, inplace=True)
 
 # <codecell>
 
@@ -111,20 +120,20 @@ series = dict(jobs = "PAYEMS",
 
 # <codecell>
 
-indicators = []
-for variable in series:
-    data = DataReader(series[variable], "fred", start="2010-1-1")
-    # renaming not necessary in master
-    data.rename(columns={"VALUE" : variable}, inplace=True)
-    indicators.append(data)
+#indicators = []
+#for variable in series:
+#    data = DataReader(series[variable], "fred", start="2010-1-1")
+#    # renaming not necessary in master
+#    data.rename(columns={"VALUE" : variable}, inplace=True)
+#    indicators.append(data)
 
 # <codecell>
 
-indicators = pandas.concat(indicators, axis=1)
+#indicators = pandas.concat(indicators, axis=1)
 
 # <codecell>
 
-indicators
+#indicators
 
 # <headingcell level=3>
 
@@ -149,7 +158,8 @@ tossup = ["Colorado", "Florida", "Iowa", "New Hampshire", "Nevada",
 
 # <codecell>
 
-national_data2012 = pandas.read_table("/home/skipper/school/seaboldgit/talks/pydata/data/2012_poll_data.csv")
+national_data2012 = pandas.read_table("/home/skipper/school/seaboldgit/talks/pydata/"
+                                      "data/2012_poll_data.csv")
 
 # <codecell>
 
@@ -179,7 +189,15 @@ state_data2012.rename(columns=dict(Poll="Pollster"), inplace=True);
 
 # <codecell>
 
+state_data2012.MoE
+
+# <codecell>
+
 state_data2012.MoE = state_data2012.MoE.replace("--", "nan").astype(float)
+
+# <codecell>
+
+state_data2012
 
 # <codecell>
 
@@ -346,7 +364,7 @@ national_data2012.Pollster.replace(pollster_map, inplace=True);
 
 # <markdowncell>
 
-# Innger merge the data with the weights
+# Inner merge the data with the weights
 
 # <codecell>
 
@@ -469,6 +487,10 @@ state_data2012 = state_data2012.join(df)
 # <codecell>
 
 td = today - state_data2012["poll_date"].head(1).item()
+
+# <codecell>
+
+state_data2012["poll_date"].head(1).item()
 
 # <codecell>
 
@@ -1031,7 +1053,7 @@ trends
 # 
 # where $S_i$ are Pollster:State dummies. In a state with a time-dependent trend, you might write
 # 
-# $$\text{Margin}=X_i+m*Z_t+\epsilon$$
+# $$\text{Margin}=X_i+m*Z_t$$
 # 
 # where $m$ is a multiplier representing uncertainty in the time-trend parameter. Solving for $m$ gives
 # 
@@ -1323,10 +1345,6 @@ def weighted_mean(group):
 
 # <codecell>
 
-group = grp.get_group("Arizona")
-
-# <codecell>
-
 group
 
 # <codecell>
@@ -1344,6 +1362,10 @@ results["obama"] = 0
 results["romney"] = 0
 results.ix[results["poll"] > 0, ["obama"]] = 1
 results.ix[results["poll"] < 0, ["romney"]] = 1
+
+# <codecell>
+
+results[["State", "poll"]].to_csv("/home/skipper/school/talks/538model/2012-predicted.csv", index=False)
 
 # <codecell>
 
@@ -1379,6 +1401,10 @@ results["Votes"].mul(results["obama"]).sum()
 # <codecell>
 
 results["Votes"].mul(results["romney"]).sum()
+
+# <codecell>
+
+results
 
 # <markdowncell>
 
