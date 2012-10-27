@@ -73,6 +73,8 @@ del full_data_states["AGE295211"]
 del full_data_states["AGE775211"]
 del full_data_states["SEX255211"] # % females - not enough variation
 del full_data_states["RHI325211"]
+full_data_states["per_older"] = older_pop / tot_pop
+full_data_states["per_vote"] = vote_pop / tot_pop
 
 full_data_states.rename(columns={
                         "INC110210" : "median_income",
